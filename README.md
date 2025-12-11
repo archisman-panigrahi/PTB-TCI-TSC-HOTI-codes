@@ -13,19 +13,20 @@ The building blocks for the tight binding model are available at `generate_matri
 
 ### Topological Crystalline Insulator
 - `PTB_hscti.ipynb`: Computes the eigensystem of the topological crystalline insulator in a projected brane.
-- `PTB_hscti_dislocation`: Computes the eigensystem of the topological crystalline insulator when a dislocation core falls in a projected brane.
+- `PTB_hscti_dislocation.ipynb`: Computes the eigensystem of the topological crystalline insulator when a dislocation core falls in a projected brane.
 - `hscti_Chern_phase_diagram.ipynb`: Generates the phase diagram of topological crystalline insulator using the Fukui-Hatsugai-Suzuki method.
 
 ### Topological superconductors
-- `PTB_topo_super`: Computes the eigensystem of the topolgoical superconductor in a projected brane.
-- `PTB_topo_super_dislocation`: Computes the eigensystem of the topolgoical superconductor in a projected brane with a dislocaiton core.
-- `PTB_ssh2d_SC_phase_weak_invariant`: Computes the weak invariant
-- `PTB_ssh2d_SC_phase_weak_invariant_commute_order`: Computes the weak invariant where the superconductor is formed by first projecting a normal topological phase to the brane, and then it is induced by manually adding the on-site paring terms.
+- `PTB_topo_super.ipynb`: Computes the eigensystem of the topolgoical superconductor in a projected brane.
+- `PTB_topo_super_dislocation.ipynb`: Computes the eigensystem of the topolgoical superconductor in a projected brane with a dislocaiton core.
+- `PTB_tipo_super_commute_projection.ipynb`: Computes the strong topological invariant where the normal phase Hamiltonian is first projected to the brane, and then superconductivity is induced by manually adding the on-site pairing terms.
+- `PTB_ssh2d_SC_phase_weak_invariant.ipynb`: Computes the weak invariant
+- `PTB_ssh2d_SC_phase_weak_invariant_commute_order.ipynb`: Computes the weak invariant where the superconductor is formed by first projecting a normal topological phase to the brane, and then superconductivity is induced by manually adding the on-site paring terms.
 - `BHZ_model_superconductivity_phase_diagram.ipynb`: Generates the phase diagram of topological superconductor by computing the Chern number using the Fukui-Hatsugai-Suzuki method.
 
 ### Higher Order (second order) Topological Insulators
 - `2D_higher_order_TI.ipynb`: Generates HOTI on a parent square lattice.
-- `PTB_2D_higher_order_TI`: Code for generating the higher order topological insulators on the projected brane.
+- `PTB_2D_higher_order_TI.ipynb`: Code for generating the higher order topological insulators on the projected brane.
 - `PTB_2D_higher_order_TI_multi_runs.ipynb` - Computes the localizer index as a function of $m_0$.
 
 ## Codes for H11
