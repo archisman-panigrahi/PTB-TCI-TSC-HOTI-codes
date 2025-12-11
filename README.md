@@ -37,7 +37,10 @@ These are the coeds describing the systems where we only consider $H_{11}$, i.e.
 - `PTB_topo_super_H11.ipynb`: The strong topological superconductor
 - `PTB_ssh2d_SC_phase_weak_invariant_H11_only.ipynb`: The weak topological superconductor 
 
+## Data
+
 Data for the parent lattice of Higher order topological insulator (HOTI) is available in the directory `HOTI_parent_data`. All other data for the projected brane are available in the folder `data`. The data for topological crystalline insulators, topological superconductor, and higher order topological insulator are available at `data/hstci`, ``data/topo_super`, and `data/HOTI`, respectively.
+The data for scaling of localizer index with system size is present at `data/HOTI/localizer_index/scaling_with_system_size/`.
 
 ## Mathematica codes for plotting
 
