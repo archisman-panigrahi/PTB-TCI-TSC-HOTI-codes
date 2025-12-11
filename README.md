@@ -1,7 +1,7 @@
 # Codes for "Projected branes as platforms for crystalline, superconducting, and higher-order topological phases"
 https://arxiv.org/pdf/2507.23783
 
-This project uses Jupyter notebooks with the Julia programming language.
+This project uses Jupyter notebooks with the [Julia](https://julialang.org/) programming language.
 
 ## Building block matrices
 
