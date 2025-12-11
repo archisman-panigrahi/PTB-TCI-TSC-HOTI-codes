@@ -44,4 +44,4 @@ The data for scaling of localizer index with system size is present at `data/HOT
 
 ## Mathematica codes for plotting
 
-While the Julia code is utilized to generate data, we use Mathematica to plot these data. These are available in the directory `mathematica plot files`.
+While the Julia code is utilized to generate data, we use Mathematica to plot these data. These are available in the directory `mathematica plot files`. Some Mathematica notebooks are also available inside the directory containing data files.
