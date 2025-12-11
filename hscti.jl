@@ -12,7 +12,6 @@ include("generate_matrices2D.jl")
 include("angmom.jl")
 
 function energy_eigenvalues_hscti(Lx::Int64, Ly::Int64, t::Float64, t_prime::Float64, m_0::Float64, x_periodic::Int64, y_periodic::Int64)
-    #close("all")
     t0 = 1.0;
 
     println("t = ",t)
@@ -46,7 +45,6 @@ function energy_eigenvalues_hscti(Lx::Int64, Ly::Int64, t::Float64, t_prime::Flo
 end
 
 function energy_eigenvalues_hscti_ky_good_quantum_number(Lx::Int64, t::Float64, t_prime::Float64, m_0::Float64, x_periodic::Int64, nvals_ky::Int64)
-    #close("all")
     #gr()
     t0 = 1.0;
     println("t = ",t)
@@ -102,7 +100,7 @@ function LocalChernMarker(Lx::Int64,Ly::Int64,t::Float64,t_prime::Float64,m_0::F
     println("t = ",t)
     println("t_prime = ", t_prime)
     println("t_0 = ", t0)
-    #println("m_0 = ", m_0)
+    println("m_0 = ", m_0)
 
     t_start = time()
 
@@ -122,7 +120,6 @@ function LocalChernMarker(Lx::Int64,Ly::Int64,t::Float64,t_prime::Float64,m_0::F
     h_scti = t*kron((SX2D + CXSY2D),sigma_x) + t*kron(SY2D+SXCY2D,sigma_y) + kron((m_0-2*t_prime)*const_2D + t0*(CX2D + CY2D) + 2*t_prime*CXCY2D,sigma_z)
 
     (energy_eigenvalues, eigenstates) = eigen(h_scti);
-    #println(size(eigenstates))
     filled_eigenstates = eigenstates[:,1:Lx*Ly]
 
     ## We create a projector P, which projects to the space of filled eigenstates (half-filled)
@@ -155,7 +152,7 @@ function BottIndexHalfFilled_hscti(Lx::Int64, Ly::Int64, t::Float64, t_prime::Fl
     println("t = ",t)
     println("t_prime = ", t_prime)
     println("t_0 = ", t0)
-    #println("m_0 = ", m_0) h_scti = t*kron((SX2D + CXSY2D),gamma_1) + t*kron(SY2D+SXCY2D,gamma_2) + kron((m_array[a]-2*t_prime)*const_2D + t0*(CX2D + CY2D) + 2*t_prime*CXCY2D,gamma_3)
+    println("m_0 = ", m_0) h_scti = t*kron((SX2D + CXSY2D),gamma_1) + t*kron(SY2D+SXCY2D,gamma_2) + kron((m_array[a]-2*t_prime)*const_2D + t0*(CX2D + CY2D) + 2*t_prime*CXCY2D,gamma_3)
 
 
     t_start = time()
@@ -179,8 +176,6 @@ function BottIndexHalfFilled_hscti(Lx::Int64, Ly::Int64, t::Float64, t_prime::Fl
         h_scti = t*kron((SX2D + CXSY2D),sigma_x) + t*kron(SY2D+SXCY2D,sigma_y) + kron((m_array[a]-2*t_prime)*const_2D + t0*(CX2D + CY2D) + 2*t_prime*CXCY2D,sigma_z)
 
         (energy_eigenvalues, eigenstates) = eigen(h_scti);
-        #println(size(eigenstates))
-        #display(scatter(1:2*Lx*Ly,energy_eigenvalues))
         filled_eigenstates = eigenstates[:,1:Lx*Ly]
 
         P = conj(filled_eigenstates) * transpose(filled_eigenstates)
@@ -189,14 +184,11 @@ function BottIndexHalfFilled_hscti(Lx::Int64, Ly::Int64, t::Float64, t_prime::Fl
         U = P * U_x * P + (kron(const_2D,eye2) - P);
         V = P * V_y * P + (kron(const_2D,eye2) - P);
         bott = U * V * U' * V'
-        #println(size(bott))
-        #bott_index = real((-im/(2*pi)) * sum(log.(eigvals(bott))))
 
         bott_index_store[a] = real((-im/(2*pi)) * sum(log.(eigvals(bott))))
         println(m_array[a],bott_index_store[a])
     end
 
-    #println(bott_index)
     println("time taken for calculation = ", time() - t_start, " seconds")
     scatter(m_array, bott_index_store)
 end
