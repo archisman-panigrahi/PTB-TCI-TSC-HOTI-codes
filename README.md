@@ -9,6 +9,8 @@ The building blocks for the tight binding model are available at `generate_matri
 
 ## Jupyter notebooks:
 
+- `PTB_brane_demo.ipynb` demonstrates how the points in the brane are takes, with a simple square lattice.
+
 ### Topological Crystalline Insulator
 - `PTB_hscti.ipynb`: Computes the eigensystem of the topological crystalline insulator in a projected brane.
 - `PTB_hscti_dislocation`: Computes the eigensystem of the topological crystalline insulator when a dislocation core falls in a projected brane.
