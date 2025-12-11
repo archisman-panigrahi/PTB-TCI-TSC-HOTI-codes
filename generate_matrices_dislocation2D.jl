@@ -152,78 +152,7 @@ if(periodic_y == 1)
 
 end
 
-# #### Second order hopping matrices
-#                     #stop
-#                       ##
-#                       ##
-#                       ##
-#              ###########
-#        #start###########
-
-# # Lower block (without connectors)
-# for a = 1:Lx-1
-#     for b = 0:l1-2
-#         CXCY2D[a+1 + (b+1)*Lx, a + b*Lx] = 1/4;
-#         CXCY2D[a + b*Lx, a+1 + (b+1)*Lx] = 1/4;
-#     end
-# end
-
-# # middle block (without connectors)
-# for a = 1:Lx
-#     for b = 0:l2-2
-#         CXCY2D[a+1 + (b+1)*(Lx+1) + Lx*l1, a + b*(Lx+1) + Lx*l1] = 1/4;
-#         CXCY2D[a + b*(Lx+1) + Lx*l1, a+1 + (b+1)*(Lx+1) + Lx*l1] = 1/4;
-#     end
-# end
-
-# # upper block (without connectors)
-# for a = 1:Lx-1
-#     for b = 0:(Ly - (l1 + l2) - 2)
-#         CXCY2D[a+1 + (b+1)*Lx + Lx*(l1+l2) + l2, a + b*Lx + Lx*(l1+l2) + l2] = 1/4;
-#         CXCY2D[a + b*Lx + Lx*(l1+l2) + l2, a+1 + (b+1)*Lx + Lx*(l1+l2) + l2] = 1/4;
-#     end
-# end
-
-#  #start ##############
-#         ##############
-#                     ##
-#                     ##
-#                     ##
-#                     ##
-#                     ##
-#                   #stop
-
-# # Lower block (without connectors)
-# ##NEEDS TO BE FIXED
-# for a = 1:Lx-1
-#     for b = 1:l1-1
-#         CXCY2D[a+1 + (b-1)*Lx, a + b*Lx] = 1/4;
-#         CXCY2D[a + b*Lx, a+1 + (b-1)*Lx] = 1/4;
-#     end
-# end
-
-# # middle block (without connectors)
-# ##NEEDS TO BE FIXED
-
-# for a = 1:Lx
-#     for b = 0:l2-2
-#         CXCY2D[a+1 + (b+1)*(Lx+1) + Lx*l1, a + b*(Lx+1) + Lx*l1] = 1/4;
-#         CXCY2D[a + b*(Lx+1) + Lx*l1, a+1 + (b+1)*(Lx+1) + Lx*l1] = 1/4;
-#     end
-# end
-
-# # upper block (without connectors)
-# ##NEEDS TO BE FIXED
-
-# for a = 1:Lx-1
-#     for b = 0:(Ly - (l1 + l2) - 2)
-#         CXCY2D[a+1 + (b+1)*Lx + Lx*(l1+l2) + l2, a + b*Lx + Lx*(l1+l2) + l2] = 1/4;
-#         CXCY2D[a + b*Lx + Lx*(l1+l2) + l2, a+1 + (b+1)*Lx + Lx*(l1+l2) + l2] = 1/4;
-#     end
-# end
-
-
-### CXCY Matrices (new implementation)
+### CXCY Matrices
 for ii = 1:Lx-1
 	for jj = 0:l1-2
 		CXCY2D[ii + jj* Lx, (ii+1) + (jj+1)*Lx] = 1/4;
