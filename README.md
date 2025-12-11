@@ -1,6 +1,7 @@
 # Codes for "Projected branes as platforms for crystalline, superconducting, and higher-order topological phases"
 
 Preprint: https://arxiv.org/pdf/2507.23783
+
 Published version: https://doi.org/10.1103/vlk8-59x3
 
 This project uses Jupyter notebooks with the [Julia](https://julialang.org/) programming language.
